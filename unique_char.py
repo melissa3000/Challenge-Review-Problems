@@ -7,9 +7,15 @@ def uni_char(s):
         char_set.add(letter)
 
     if len(s) != len(char_set):
-        print False
+        return False
     else:
-        print True
+        return True
+
+
+    # optimized:
+    # return len(set(s)) == len(s)
+
+
 
 
 uni_char('abedfgh') # T
