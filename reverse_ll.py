@@ -7,8 +7,19 @@ class Node(object):
 
 def reverse(head):
 
-    while head.nextnode != None:
-        head = head.nextnode
+    current = head
+    previous = None
+    nextnode = None
 
-    print head.value
-    print head.nextnode.value
+    while current:
+        # copy current node's next node to nextnode variable before overwriting
+        nextnode = current.nextnode
+
+        # reverse pointer to the nextnode
+        current.nextnode = previous
+
+        # move forward in the list
+        previous = current
+        current = nextnode
+
+    return previous
