@@ -18,6 +18,7 @@ def nth_to_last_node(n, head):
         right_pointer = right_pointer.nextnode
         left_pointer = left_pointer.nextnode
 
+    # return left pointer when you reach the end of the list (when right pointer next node is None)
     return left_pointer
 
 
