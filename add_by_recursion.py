@@ -8,6 +8,10 @@
 
 
 
+#============================================================================
+
+
+
 # def sum_func(n):
 #     if n < 10:
 #         return n
@@ -17,28 +21,66 @@
 # sum_func(4321)
 
 
-
-def word_split(phrase,list_of_words, output = None):
-
-    if output is None:
-        output = []
-
-
-    # for item in list_of_words:
-    #     if item in phrase:
-    #         output.append(item)
-    #         return word_split(phrase.replace(item, ''), list_of_words, output)
-
-
-    for word in list_of_words:
-        if phrase.startswith(word):
-            output.append(word)
-            return word_split(phrase[len(word):], list_of_words, output)
-
-    return output
+#============================================================================
 
 
 
+# def word_split(phrase,list_of_words, output = None):
 
-word_split('themanran',['the','ran','man']) #==>['the', 'man', 'ran']
-word_split('themanran',['clown','ran','man']) #==> []
+#     if output is None:
+#         output = []
+
+
+#     # for item in list_of_words:
+#     #     if item in phrase:
+#     #         output.append(item)
+#     #         return word_split(phrase.replace(item, ''), list_of_words, output)
+
+
+#     for word in list_of_words:
+#         if phrase.startswith(word):
+#             output.append(word)
+#             return word_split(phrase[len(word):], list_of_words, output)
+
+#     return output
+
+
+
+
+# word_split('themanran',['the','ran','man']) #==>['the', 'man', 'ran']
+# word_split('themanran',['clown','ran','man']) #==> []
+
+
+
+
+#============================================================================
+
+
+
+# def reverse(s):
+#     if len(s) == 1:
+#         return s
+
+#     return s[-1] + reverse(s[:-1])
+
+# reverse('hello world') #==>'dlrow olleh'
+
+
+
+
+
+#============================================================================
+
+
+
+def permute(s):
+
+    result = []
+
+    while i < len(s):
+
+
+
+
+permute('abc') #==>['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+
